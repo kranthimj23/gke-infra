@@ -6,7 +6,7 @@
 # GCP Project Configuration
 # =============================================================================
 
-project_id = "mobile-app-1-482109"
+project_id = "speedy-insight-483010-m3"
 region     = "us-central1"
 zone       = "us-central1-a"
 
@@ -63,7 +63,7 @@ jenkins_allowed_ips = ["0.0.0.0/0"]  # Restrict in production
 # =============================================================================
 
 service_account_name     = "gke-jenkins-sa"
-service_account_key_path = "/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json"
+service_account_key_path = "/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json"
 local_sa_key_path        = "./keys/service-account-key.json"
 save_sa_key_locally      = true
 

@@ -14,11 +14,11 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Default values (can be overridden by environment variables)
-PROJECT_ID="${GCP_PROJECT_ID:-mobile-app-1-482109}"
+PROJECT_ID="${GCP_PROJECT_ID:-speedy-insight-483010-m3}"
 SA_NAME="${SERVICE_ACCOUNT_NAME:-gke-jenkins-sa}"
 SA_DISPLAY_NAME="${SA_DISPLAY_NAME:-GKE Jenkins Service Account}"
 KEY_OUTPUT_PATH="${LOCAL_SA_KEY_PATH:-./keys/service-account-key.json}"
-JENKINS_KEY_PATH="${SERVICE_ACCOUNT_KEY_PATH:-/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json}"
+JENKINS_KEY_PATH="${SERVICE_ACCOUNT_KEY_PATH:-/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json}"
 
 # IAM roles for the service account
 IAM_ROLES=(

@@ -8,7 +8,7 @@
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
-  default     = "mobile-app-1-482109"
+  default     = "speedy-insight-483010-m3"
 }
 
 variable "region" {
@@ -218,7 +218,7 @@ variable "service_account_name" {
 variable "service_account_key_path" {
   description = "Path to store service account key on Jenkins VM"
   type        = string
-  default     = "/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json"
+  default     = "/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json"
 }
 
 variable "local_sa_key_path" {

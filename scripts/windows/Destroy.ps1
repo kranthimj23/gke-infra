@@ -89,7 +89,7 @@ if (Test-Path ".\.env.ps1") {
     . .\.env.ps1
 }
 
-$ProjectId = if ($env:GCP_PROJECT_ID) { $env:GCP_PROJECT_ID } else { "mobile-app-1-482109" }
+$ProjectId = if ($env:GCP_PROJECT_ID) { $env:GCP_PROJECT_ID } else { "speedy-insight-483010-m3" }
 $Zone = if ($env:GCP_ZONE) { $env:GCP_ZONE } else { "us-central1-a" }
 
 # ============================================================================

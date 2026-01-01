@@ -7,7 +7,7 @@
 # =============================================================================
 
 # GCP Project ID (required)
-$env:GCP_PROJECT_ID = "mobile-app-1-482109"
+$env:GCP_PROJECT_ID = "speedy-insight-483010-m3"
 
 # GCP Region for resources
 $env:GCP_REGION = "us-central1"
@@ -92,7 +92,7 @@ $env:GKE_SERVICES_CIDR = "10.2.0.0/20"
 $env:SERVICE_ACCOUNT_NAME = "gke-jenkins-sa"
 
 # Service account key path (on Jenkins VM)
-$env:SERVICE_ACCOUNT_KEY_PATH = "/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json"
+$env:SERVICE_ACCOUNT_KEY_PATH = "/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json"
 
 # Local path for service account key (during provisioning)
 $env:LOCAL_SA_KEY_PATH = ".\keys\service-account-key.json"

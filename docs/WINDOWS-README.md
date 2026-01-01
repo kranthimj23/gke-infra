@@ -91,7 +91,7 @@ gcloud init
 Follow the prompts:
 1. Choose to log in with a new account
 2. A browser window will open - log in with your Google account
-3. Select the project: `mobile-app-1-482109`
+3. Select the project: `speedy-insight-483010-m3`
 4. Choose a default region: `us-central1`
 
 ### 2.2 Set Application Default Credentials
@@ -111,7 +111,7 @@ gcloud auth list
 gcloud config get-value project
 
 # Test project access
-gcloud projects describe mobile-app-1-482109
+gcloud projects describe speedy-insight-483010-m3
 ```
 
 ---
@@ -143,7 +143,7 @@ Edit `.env.ps1` with your settings:
 
 ```powershell
 # Key settings to verify/modify:
-$env:GCP_PROJECT_ID = "mobile-app-1-482109"
+$env:GCP_PROJECT_ID = "speedy-insight-483010-m3"
 $env:GCP_REGION = "us-central1"
 $env:GCP_ZONE = "us-central1-a"
 $env:GKE_CLUSTER_NAME = "autopilot-cluster-1"

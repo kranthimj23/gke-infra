@@ -126,7 +126,7 @@ fi
 
 # Display configuration
 print_info "Configuration:"
-echo "  Project ID:     ${GCP_PROJECT_ID:-mobile-app-1-482109}"
+echo "  Project ID:     ${GCP_PROJECT_ID:-speedy-insight-483010-m3}"
 echo "  Region:         ${GCP_REGION:-us-central1}"
 echo "  Zone:           ${GCP_ZONE:-us-central1-a}"
 echo "  Cluster Name:   ${GKE_CLUSTER_NAME:-autopilot-cluster-1}"
@@ -156,7 +156,7 @@ fi
 # ============================================================================
 print_step "2" "Enable Required GCP APIs"
 
-PROJECT_ID="${GCP_PROJECT_ID:-mobile-app-1-482109}"
+PROJECT_ID="${GCP_PROJECT_ID:-speedy-insight-483010-m3}"
 
 print_info "Enabling required APIs for project: $PROJECT_ID"
 
@@ -230,7 +230,7 @@ if [ ! -f "terraform.tfvars" ]; then
 # Auto-generated terraform.tfvars
 # Generated on: $(date)
 
-project_id = "${GCP_PROJECT_ID:-mobile-app-1-482109}"
+project_id = "${GCP_PROJECT_ID:-speedy-insight-483010-m3}"
 region     = "${GCP_REGION:-us-central1}"
 zone       = "${GCP_ZONE:-us-central1-a}"
 
@@ -252,7 +252,7 @@ jenkins_http_port    = ${JENKINS_HTTP_PORT:-8080}
 
 # Service Account
 service_account_name     = "${SERVICE_ACCOUNT_NAME:-gke-jenkins-sa}"
-service_account_key_path = "${SERVICE_ACCOUNT_KEY_PATH:-/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json}"
+service_account_key_path = "${SERVICE_ACCOUNT_KEY_PATH:-/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json}"
 
 # Python
 python_version = "${PYTHON_VERSION:-3.11}"

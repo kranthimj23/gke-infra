@@ -99,7 +99,7 @@ if (Test-Path ".\env.ps1") {
 }
 
 # Set defaults
-if (-not $env:GCP_PROJECT_ID) { $env:GCP_PROJECT_ID = "mobile-app-1-482109" }
+if (-not $env:GCP_PROJECT_ID) { $env:GCP_PROJECT_ID = "speedy-insight-483010-m3" }
 if (-not $env:GCP_REGION) { $env:GCP_REGION = "us-central1" }
 if (-not $env:GCP_ZONE) { $env:GCP_ZONE = "us-central1-a" }
 if (-not $env:GKE_CLUSTER_NAME) { $env:GKE_CLUSTER_NAME = "autopilot-cluster-1" }
@@ -239,7 +239,7 @@ jenkins_http_port    = $(if ($env:JENKINS_HTTP_PORT) { $env:JENKINS_HTTP_PORT } 
 
 # Service Account
 service_account_name     = "$(if ($env:SERVICE_ACCOUNT_NAME) { $env:SERVICE_ACCOUNT_NAME } else { "gke-jenkins-sa" })"
-service_account_key_path = "$(if ($env:SERVICE_ACCOUNT_KEY_PATH) { $env:SERVICE_ACCOUNT_KEY_PATH } else { "/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json" })"
+service_account_key_path = "$(if ($env:SERVICE_ACCOUNT_KEY_PATH) { $env:SERVICE_ACCOUNT_KEY_PATH } else { "/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json" })"
 
 # Python
 python_version = "$(if ($env:PYTHON_VERSION) { $env:PYTHON_VERSION } else { "3.11" })"

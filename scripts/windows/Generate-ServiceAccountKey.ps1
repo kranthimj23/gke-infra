@@ -9,7 +9,7 @@
     and generates a JSON key file for authentication.
 
 .PARAMETER ProjectId
-    GCP Project ID (default: from environment variable or mobile-app-1-482109)
+    GCP Project ID (default: from environment variable or speedy-insight-483010-m3)
 
 .PARAMETER ServiceAccountName
     Service account name (default: gke-jenkins-sa)
@@ -30,7 +30,7 @@ param(
 )
 
 # Set defaults if not provided
-if (-not $ProjectId) { $ProjectId = "mobile-app-1-482109" }
+if (-not $ProjectId) { $ProjectId = "speedy-insight-483010-m3" }
 if (-not $ServiceAccountName) { $ServiceAccountName = "gke-jenkins-sa" }
 if (-not $OutputPath) { $OutputPath = ".\keys\service-account-key.json" }
 
