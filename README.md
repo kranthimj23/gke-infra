@@ -15,7 +15,7 @@ This project provides automated provisioning of:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         GCP Project: mobile-app-1-482109                │
+│                         GCP Project: speedy-insight-483010-m3                │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
 │  ┌─────────────────────────────────────────────────────────────────┐   │
@@ -105,7 +105,7 @@ gcloud auth login
 gcloud auth application-default login
 
 # Set project
-gcloud config set project mobile-app-1-482109
+gcloud config set project speedy-insight-483010-m3
 ```
 
 ### 3. Run Setup
@@ -135,7 +135,7 @@ All infrastructure parameters are configurable via environment variables. Copy `
 
 ```bash
 # GCP Project
-export GCP_PROJECT_ID="mobile-app-1-482109"
+export GCP_PROJECT_ID="speedy-insight-483010-m3"
 export GCP_REGION="us-central1"
 export GCP_ZONE="us-central1-a"
 
@@ -151,7 +151,7 @@ export JENKINS_MACHINE_TYPE="e2-medium"
 export JENKINS_HTTP_PORT="8080"
 
 # Service Account
-export SERVICE_ACCOUNT_KEY_PATH="/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json"
+export SERVICE_ACCOUNT_KEY_PATH="/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json"
 ```
 
 ### Terraform Variables
@@ -287,7 +287,7 @@ gcloud compute ssh jenkins-server --zone=us-central1-a \
 # Get cluster credentials
 gcloud container clusters get-credentials autopilot-cluster-1 \
   --zone us-central1-a \
-  --project mobile-app-1-482109
+  --project speedy-insight-483010-m3
 
 # Verify connection
 kubectl get nodes
@@ -311,8 +311,8 @@ kubectl get nodes
 This infrastructure is designed to work with existing Jenkins Groovy pipeline files without modification. The following environment variables are automatically available on the Jenkins VM:
 
 ```bash
-GOOGLE_APPLICATION_CREDENTIALS=/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json
-GCP_PROJECT_ID=mobile-app-1-482109
+GOOGLE_APPLICATION_CREDENTIALS=/var/lib/jenkins/keys/speedy-insight-483010-m3-e631e1327727.json
+GCP_PROJECT_ID=speedy-insight-483010-m3
 GKE_CLUSTER_NAME=autopilot-cluster-1
 GKE_CLUSTER_ZONE=us-central1-a
 ```
@@ -382,7 +382,7 @@ gcloud compute ssh jenkins-server --zone=us-central1-a \
 # Re-authenticate
 gcloud container clusters get-credentials autopilot-cluster-1 \
   --zone us-central1-a \
-  --project mobile-app-1-482109
+  --project speedy-insight-483010-m3
 ```
 
 ### Logs and Debugging

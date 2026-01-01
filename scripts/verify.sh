@@ -68,7 +68,7 @@ if [ -f ".env" ]; then
     source .env
 fi
 
-PROJECT_ID="${GCP_PROJECT_ID:-mobile-app-1-482109}"
+PROJECT_ID="${GCP_PROJECT_ID:-speedy-insight-483010-m3}"
 ZONE="${GCP_ZONE:-us-central1-a}"
 
 # Get Terraform outputs

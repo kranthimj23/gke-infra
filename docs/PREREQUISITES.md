@@ -122,7 +122,7 @@ The user or service account running Terraform needs the following roles:
 ```bash
 gcloud auth login
 gcloud auth application-default login
-gcloud config set project mobile-app-1-482109
+gcloud config set project speedy-insight-483010-m3
 ```
 
 ### Option 2: Service Account (CI/CD)
