@@ -1,0 +1,82 @@
+# Terraform Variables Example
+# Copy this file to terraform.tfvars and customize the values
+# These values can also be set via environment variables with TF_VAR_ prefix
+
+# =============================================================================
+# GCP Project Configuration
+# =============================================================================
+
+project_id = "mobile-app-1-482109"
+region     = "us-central1"
+zone       = "us-central1-a"
+
+# =============================================================================
+# Networking Configuration
+# =============================================================================
+
+vpc_network_name       = "gke-jenkins-vpc"
+subnet_name            = "gke-jenkins-subnet"
+subnet_cidr            = "10.0.0.0/24"
+gke_pods_cidr_name     = "gke-pods"
+gke_pods_cidr          = "10.1.0.0/16"
+gke_services_cidr_name = "gke-services"
+gke_services_cidr      = "10.2.0.0/20"
+
+# =============================================================================
+# GKE Cluster Configuration
+# =============================================================================
+
+gke_cluster_name      = "autopilot-cluster-1"
+gke_cluster_version   = ""  # Leave empty for latest stable
+gke_node_pool_name    = "default-pool"
+gke_node_count        = 2
+gke_min_node_count    = 1
+gke_max_node_count    = 5
+gke_node_machine_type = "e2-medium"
+gke_node_disk_size_gb = 50
+gke_node_disk_type    = "pd-standard"
+gke_preemptible_nodes = true  # Cost optimization: use preemptible nodes
+
+gke_master_authorized_networks = [
+  {
+    cidr_block   = "0.0.0.0/0"
+    display_name = "All"
+  }
+]
+
+# =============================================================================
+# Jenkins VM Configuration
+# =============================================================================
+
+jenkins_vm_name      = "jenkins-server"
+jenkins_machine_type = "e2-medium"
+jenkins_disk_size_gb = 50
+jenkins_disk_type    = "pd-standard"
+jenkins_preemptible  = false  # Not recommended for production Jenkins
+jenkins_http_port    = 8080
+jenkins_jnlp_port    = 50000
+
+jenkins_allowed_ips = ["0.0.0.0/0"]  # Restrict in production
+
+# =============================================================================
+# Service Account Configuration
+# =============================================================================
+
+service_account_name     = "gke-jenkins-sa"
+service_account_key_path = "/var/lib/jenkins/keys/mobile-app-1-482109-e631e1327727.json"
+local_sa_key_path        = "./keys/service-account-key.json"
+save_sa_key_locally      = true
+
+# =============================================================================
+# Python Configuration
+# =============================================================================
+
+python_version = "3.11"
+
+# =============================================================================
+# Labels and Tags
+# =============================================================================
+
+environment = "development"
+team        = "devops"
+application = "jenkins-cicd"
